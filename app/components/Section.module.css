@@ -1,0 +1,138 @@
+.content {
+  padding: 3.5rem 0 5rem;
+  max-width: 760px;
+}
+
+.paragraph {
+  color: var(--color-text-dim);
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.grid {
+  padding: 3.5rem 0 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-dark);
+  padding: 1.5rem;
+  border-radius: 2px;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.cardMeta {
+  font-size: 0.85rem;
+  color: var(--color-text-faint);
+  margin-bottom: 0.75rem;
+}
+
+.cardText {
+  font-size: 0.9rem;
+  color: var(--color-text-dim);
+}
+
+.list {
+  padding: 3.5rem 0 5rem;
+  max-width: 760px;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.listItem:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.listDate {
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.listTitle {
+  font-size: 1.05rem;
+}
+
+.listMeta {
+  font-size: 0.85rem;
+  color: var(--color-text-faint);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.9rem 2rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 2px;
+  background-color: var(--color-accent);
+  color: var(--color-black);
+  font-weight: 600;
+  transition: background-color 0.25s ease;
+}
+
+.button:hover {
+  background-color: #ff5c5c;
+}
+
+.contactBlock {
+  padding: 3.5rem 0 5rem;
+  max-width: 600px;
+}
+
+.contactEmail {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  letter-spacing: 1px;
+  color: var(--color-accent);
+  display: inline-block;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.socialRow {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socialRow a {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-text-dim);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.25rem;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.socialRow a:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}

@@ -1,0 +1,18 @@
+.header {
+  padding: calc(var(--nav-height) + 4rem) 0 3rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  letter-spacing: 3px;
+}
