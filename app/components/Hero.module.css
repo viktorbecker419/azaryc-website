@@ -5,37 +5,25 @@
   align-items: center;
   padding-top: var(--nav-height);
   overflow: hidden;
-  /* PLACEHOLDER BACKGROUND — replace with a real photo of Rico/AZARYC.
-     To do that: drop an image into /public, e.g. /public/azaryc-hero.jpg,
-     then uncomment the background-image line below and delete this comment. */
   background-color: var(--color-black);
   background-image:
-    radial-gradient(circle at 20% 20%, rgba(255, 61, 61, 0.08), transparent 45%),
-    radial-gradient(circle at 80% 70%, rgba(255, 61, 61, 0.06), transparent 50%);
-  /* background-image: url('/azaryc-hero.jpg'); */
+    radial-gradient(circle at 20% 20%, var(--color-accent-dim), transparent 45%),
+    radial-gradient(circle at 80% 70%, var(--color-accent-dim), transparent 50%);
   background-size: cover;
   background-position: center;
+  transition: background-color 0.3s ease;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(180deg, rgba(10, 10, 10, 0.4) 0%, rgba(10, 10, 10, 0.85) 100%);
+  background: var(--color-hero-overlay);
   pointer-events: none;
 }
 
 .content {
   position: relative;
   z-index: 1;
-}
-
-.eyebrow {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--color-accent);
-  margin-bottom: 1.5rem;
 }
 
 .title {
@@ -58,35 +46,21 @@
   margin-top: 2.5rem;
 }
 
-.button,
-.buttonSecondary {
+.button {
   display: inline-block;
   padding: 0.9rem 2rem;
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   border-radius: 2px;
-  transition: all 0.25s ease;
-}
-
-.button {
   background-color: var(--color-accent);
-  color: var(--color-black);
+  color: #ffffff;
   font-weight: 600;
+  transition: opacity 0.25s ease;
 }
 
 .button:hover {
-  background-color: #ff5c5c;
-}
-
-.buttonSecondary {
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
-}
-
-.buttonSecondary:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
+  opacity: 0.85;
 }
 
 @media (max-width: 768px) {
@@ -94,8 +68,7 @@
     flex-direction: column;
   }
 
-  .button,
-  .buttonSecondary {
+  .button {
     text-align: center;
   }
 }
