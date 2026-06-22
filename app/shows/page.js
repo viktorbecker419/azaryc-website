@@ -1,18 +1,11 @@
 import Navigation from '../components/Navigation';
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
-import styles from '../components/Section.module.css';
+import styles from './shows.module.css';
 
 export const metadata = {
   title: 'Shows — AZARYC',
 };
-
-const shows = [
-  { date: '[Date]', title: '[Venue / Festival name]', meta: '[City, Country]' },
-  { date: '[Date]', title: '[Venue / Festival name]', meta: '[City, Country]' },
-  { date: '[Date]', title: '[Venue / Festival name]', meta: '[City, Country]' },
-  { date: '[Date]', title: '[Venue / Festival name]', meta: '[City, Country]' },
-];
 
 export default function ShowsPage() {
   return (
@@ -20,14 +13,12 @@ export default function ShowsPage() {
       <Navigation />
       <PageHeader eyebrow="Live" title="Shows" />
 
-      <section className={`container ${styles.list}`}>
-        {shows.map((show, i) => (
-          <div className={styles.listItem} key={i}>
-            <span className={styles.listDate}>{show.date}</span>
-            <span className={styles.listTitle}>{show.title}</span>
-            <span className={styles.listMeta}>{show.meta}</span>
-          </div>
-        ))}
+      <section className={`container ${styles.empty}`}>
+        <p className={styles.emptyText}>No upcoming shows at the moment.</p>
+        <p className={styles.emptySubtext}>
+          For booking enquiries, get in touch at{' '}
+          <a href="mailto:azarycmusic@gmail.com">azarycmusic@gmail.com</a>
+        </p>
       </section>
 
       <Footer />

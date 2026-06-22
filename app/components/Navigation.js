@@ -7,7 +7,7 @@ import styles from './Navigation.module.css';
 const links = [
   { label: 'About', href: '/about' },
   { label: 'Bandcamp', href: 'https://ricocasazza.bandcamp.com', external: true },
-  { label: 'Discography', href: '/discography' },
+  { label: 'Discography', href: 'https://www.discogs.com/artist/824607-Rico-Casazza', external: true },
   { label: 'Film Music', href: '/filmmusic' },
   { label: 'Shows', href: '/shows' },
   { label: 'Get in Touch', href: '/contact' },
