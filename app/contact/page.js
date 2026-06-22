@@ -4,7 +4,10 @@ import Footer from '../components/Footer';
 import styles from '../components/Section.module.css';
 
 export const metadata = {
-  title: 'Get in Touch — AZARYC',
+  title: 'Get in Touch',
+  description:
+    'Booking and general enquiries for AZARYC. DJ bookings, live performances, and collaborations. Contact: azarycmusic@gmail.com',
+  alternates: { canonical: 'https://azaryc.com/contact' },
 };
 
 export default function ContactPage() {

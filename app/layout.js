@@ -1,5 +1,6 @@
 import { Bebas_Neue, Inter } from 'next/font/google';
 import './globals.css';
+import JsonLd from './components/JsonLd';
 
 const bebas = Bebas_Neue({
   weight: '400',
@@ -13,9 +14,49 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'AZARYC — Cinematic Post-Rave Soul',
+  metadataBase: new URL('https://azaryc.com'),
+  title: {
+    default: 'AZARYC — Cinematic · Post-Rave · Soul',
+    template: '%s — AZARYC',
+  },
   description:
-    'AZARYC is an electronic music producer and DJ. Electro, IDM, minimal and techno with cinematic elements. Cinematic. Post-Rave. Soul.',
+    'AZARYC is the alias of Rico Casazza — DJ, electronic music producer, film composer and sound designer. Electro, IDM, Minimal and Techno with cinematic depth. Based in Prague.',
+  keywords: [
+    'AZARYC', 'Rico Casazza', 'DJ', 'electronic music producer', 'electro',
+    'IDM', 'minimal techno', 'techno', 'Prague DJ', 'underground electronic music',
+    'film composer', 'cinematic electronic music', 'Bandcamp', 'Discogs',
+    'Boiler Room', 'Fabric London', 'post-rave',
+  ],
+  authors: [{ name: 'AZARYC' }],
+  creator: 'AZARYC',
+  openGraph: {
+    type: 'website',
+    locale: 'en_GB',
+    url: 'https://azaryc.com',
+    siteName: 'AZARYC',
+    title: 'AZARYC — Cinematic · Post-Rave · Soul',
+    description:
+      'DJ, electronic music producer, film composer and sound designer. Electro, IDM, Minimal and Techno with cinematic depth.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AZARYC — Cinematic · Post-Rave · Soul',
+    description:
+      'DJ, electronic music producer, film composer and sound designer. Electro, IDM, Minimal and Techno with cinematic depth.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://azaryc.com',
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -28,7 +69,10 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <JsonLd />
+        {children}
+      </body>
     </html>
   );
 }

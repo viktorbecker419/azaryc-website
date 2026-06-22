@@ -4,7 +4,10 @@ import Footer from '../components/Footer';
 import styles from './shows.module.css';
 
 export const metadata = {
-  title: 'Shows — AZARYC',
+  title: 'Shows',
+  description:
+    'Upcoming live shows and DJ sets by AZARYC. Electronic music performances across Europe and worldwide. Booking: azarycmusic@gmail.com',
+  alternates: { canonical: 'https://azaryc.com/shows' },
 };
 
 export default function ShowsPage() {

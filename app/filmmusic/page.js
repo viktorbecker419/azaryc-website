@@ -4,7 +4,10 @@ import Footer from '../components/Footer';
 import styles from './filmmusic.module.css';
 
 export const metadata = {
-  title: 'Film Music — AZARYC',
+  title: 'Film Music',
+  description:
+    'Film music composition and sound design by AZARYC. Original scores for international film and documentary productions since 2021.',
+  alternates: { canonical: 'https://azaryc.com/filmmusic' },
 };
 
 const films = [

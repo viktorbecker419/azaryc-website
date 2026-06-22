@@ -4,7 +4,10 @@ import Footer from '../components/Footer';
 import styles from '../components/Section.module.css';
 
 export const metadata = {
-  title: 'About — AZARYC',
+  title: 'About',
+  description:
+    'Biography of AZARYC (Rico Casazza) — DJ, electronic music producer, film composer and sound designer. 20 years in the underground, from London to Prague.',
+  alternates: { canonical: 'https://azaryc.com/about' },
 };
 
 export default function AboutPage() {
