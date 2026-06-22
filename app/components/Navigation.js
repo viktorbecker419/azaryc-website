@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import ThemeToggle from './ThemeToggle';
 import styles from './Navigation.module.css';
 
 const links = [
@@ -22,17 +23,6 @@ export default function Navigation() {
         <Link href="/" className={styles.logo} onClick={() => setIsOpen(false)}>
           AZARYC
         </Link>
-
-        <button
-          className={styles.hamburger}
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-          aria-expanded={isOpen}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
 
         <ul className={`${styles.links} ${isOpen ? styles.linksOpen : ''}`}>
           {links.map((link) =>
@@ -56,6 +46,20 @@ export default function Navigation() {
             )
           )}
         </ul>
+
+        <div className={styles.right}>
+          <ThemeToggle />
+          <button
+            className={styles.hamburger}
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={isOpen}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
       </div>
     </nav>
   );

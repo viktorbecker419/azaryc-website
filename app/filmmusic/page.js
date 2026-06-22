@@ -25,8 +25,7 @@ export default function FilmMusicPage() {
 
       <section className={`container ${styles.intro}`}>
         <p className={styles.bio}>
-          [PLACEHOLDER — short paragraph about your film composition work. Keep it concise,
-          one or two sentences describing the approach, genres, and type of productions you score.]
+          Music composer for film and documentary with over 15 years of experience in electronic music production. I merge production expertise with a cinematic and emotional approach to sound — crafting original scores that fuse texture, atmosphere, and narrative for international productions.
         </p>
       </section>
 

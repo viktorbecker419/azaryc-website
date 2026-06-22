@@ -67,3 +67,16 @@ img {
     scroll-behavior: auto !important;
   }
 }
+
+/* ── LIGHT THEME ── */
+[data-theme="light"] {
+  --color-black: #f0ede8;
+  --color-dark: #e4e0da;
+  --color-dark-2: #d8d4ce;
+  --color-accent: #cc2200;
+  --color-accent-dim: rgba(204, 34, 0, 0.12);
+  --color-text: #111111;
+  --color-text-dim: rgba(17, 17, 17, 0.75);
+  --color-text-faint: rgba(17, 17, 17, 0.45);
+  --color-border: rgba(204, 34, 0, 0.2);
+}

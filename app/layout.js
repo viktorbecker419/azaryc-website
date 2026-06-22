@@ -21,6 +21,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${bebas.variable} ${inter.variable}`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem('azaryc-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();`,
+          }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
