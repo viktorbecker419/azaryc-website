@@ -20,7 +20,7 @@ export const metadata = {
     template: '%s — AZARYC',
   },
   description:
-    'AZARYC is the alias of Rico Casazza — DJ, electronic music producer, film composer and sound designer. Electro, IDM, Minimal and Techno with cinematic depth. Based in Prague.',
+    'DJ, electronic music producer, film composer, sound designer.',
   keywords: [
     'AZARYC', 'Rico Casazza', 'DJ', 'electronic music producer', 'electro',
     'IDM', 'minimal techno', 'techno', 'Prague DJ', 'underground electronic music',
@@ -36,13 +36,13 @@ export const metadata = {
     siteName: 'AZARYC',
     title: 'AZARYC — Cinematic · Post-Rave · Soul',
     description:
-      'DJ, electronic music producer, film composer and sound designer. Electro, IDM, Minimal and Techno with cinematic depth.',
+      'DJ, electronic music producer, film composer, sound designer.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AZARYC — Cinematic · Post-Rave · Soul',
     description:
-      'DJ, electronic music producer, film composer and sound designer. Electro, IDM, Minimal and Techno with cinematic depth.',
+      'DJ, electronic music producer, film composer, sound designer.',
   },
   robots: {
     index: true,
