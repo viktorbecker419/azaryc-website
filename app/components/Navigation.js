@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import ThemeToggle from './ThemeToggle';
 import styles from './Navigation.module.css';
 
@@ -21,19 +22,21 @@ export default function Navigation() {
     <nav className={styles.nav}>
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.logo} onClick={() => setIsOpen(false)}>
-          AZARYC
+          <Image
+            src="/azaryc-logo.png"
+            alt="AZARYC"
+            width={120}
+            height={30}
+            className={styles.logoImg}
+            priority
+          />
         </Link>
 
         <ul className={`${styles.links} ${isOpen ? styles.linksOpen : ''}`}>
           {links.map((link) =>
             link.external ? (
               <li key={link.label}>
-                <a
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsOpen(false)}
-                >
+                <a href={link.href} target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
                   {link.label}
                 </a>
               </li>

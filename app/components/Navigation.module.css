@@ -97,3 +97,12 @@
   align-items: center;
   gap: 0.75rem;
 }
+
+.logoImg {
+  object-fit: contain;
+  filter: brightness(1);
+}
+
+[data-theme="light"] .logoImg {
+  filter: invert(1);
+}

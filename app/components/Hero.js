@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -5,7 +6,14 @@ export default function Hero() {
     <section className={styles.hero} id="hero">
       <div className={styles.overlay} />
       <div className={`container ${styles.content}`}>
-        <h1 className={styles.title}>AZARYC</h1>
+        <Image
+          src="/azaryc-logo.png"
+          alt="AZARYC"
+          width={700}
+          height={175}
+          className={styles.logoImg}
+          priority
+        />
         <p className={styles.subtitle}>Cinematic · Post-Rave · Soul</p>
 
         <div className={styles.cta}>

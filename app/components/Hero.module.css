@@ -26,19 +26,22 @@
   z-index: 1;
 }
 
-.title {
-  font-family: var(--font-display);
-  font-size: clamp(3.5rem, 12vw, 8rem);
-  font-weight: 300;
-  letter-spacing: 0.25em;
-  line-height: 1;
+.logoImg {
+  width: clamp(280px, 55vw, 650px);
+  height: auto;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+[data-theme="light"] .logoImg {
+  filter: invert(1);
 }
 
 .subtitle {
-  margin-top: 1.25rem;
   font-size: 1.1rem;
   color: var(--color-text-dim);
   letter-spacing: 1px;
+  margin-bottom: 0;
 }
 
 .cta {
@@ -68,7 +71,6 @@
   .cta {
     flex-direction: column;
   }
-
   .button {
     text-align: center;
   }

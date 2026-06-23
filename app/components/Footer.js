@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 const socials = [
@@ -67,7 +68,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.inner}`}>
         <div className={styles.brand}>
-          <p className={styles.logo}>AZARYC</p>
+          <Image src="/azaryc-logo.png" alt="AZARYC" width={110} height={28} className={styles.logoImg} />
           <p className={styles.tagline}>Cinematic · Post-Rave · Soul</p>
         </div>
 

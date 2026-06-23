@@ -63,3 +63,12 @@
     justify-content: flex-start;
   }
 }
+
+.logoImg {
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+[data-theme="light"] .logoImg {
+  filter: invert(1);
+}
