@@ -1,0 +1,73 @@
+.page {
+  padding: 3rem 0 5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.sectionLabel {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-accent);
+}
+
+.trackLabel {
+  margin: 3rem 0 1.5rem;
+}
+
+.bandcampLink {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-text-faint);
+  transition: color 0.25s ease;
+}
+
+.bandcampLink:hover {
+  color: var(--color-accent);
+}
+
+/* Albums: 3-column grid with artwork visible */
+.albumGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.albumCell {
+  width: 100%;
+  height: 500px;
+}
+
+/* Tracks: 2-column grid */
+.trackGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.trackCell {
+  width: 100%;
+  height: 120px;
+}
+
+@media (max-width: 900px) {
+  .albumGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .albumGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .trackGrid {
+    grid-template-columns: 1fr;
+  }
+}
