@@ -1,11 +1,11 @@
-import { Bebas_Neue, Inter } from 'next/font/google';
+import { Cormorant_Garamond, Inter } from 'next/font/google';
 import './globals.css';
 import JsonLd from './components/JsonLd';
 
-const bebas = Bebas_Neue({
-  weight: '400',
+const cormorant = Cormorant_Garamond({
+  weight: ['300', '400', '500'],
   subsets: ['latin'],
-  variable: '--font-bebas',
+  variable: '--font-logo',
 });
 
 const inter = Inter({
@@ -61,7 +61,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${bebas.variable} ${inter.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
       <head>
         <script
           dangerouslySetInnerHTML={{

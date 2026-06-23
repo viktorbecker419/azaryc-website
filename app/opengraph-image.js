@@ -6,6 +6,10 @@ export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
 export default async function Image() {
+  const fontData = await fetch(
+    'https://fonts.gstatic.com/s/cormorantgaramond/v22/co3YmX5slCNuHLi8bLeY9MK7whWMhyjornFLsS6V7w.woff2'
+  ).then((res) => res.arrayBuffer());
+
   return new ImageResponse(
     (
       <div
@@ -22,21 +26,23 @@ export default async function Image() {
       >
         <div
           style={{
-            width: '60px',
-            height: '3px',
+            width: '50px',
+            height: '1px',
             background: '#f5f5f5',
-            marginBottom: '40px',
+            marginBottom: '50px',
+            opacity: 0.4,
           }}
         />
 
         <div
           style={{
-            fontSize: '140px',
-            fontWeight: '900',
+            fontSize: '130px',
+            fontWeight: '300',
+            fontFamily: 'Cormorant Garamond',
             color: '#f5f5f5',
-            letterSpacing: '-2px',
+            letterSpacing: '0.2em',
             lineHeight: 1,
-            marginBottom: '30px',
+            marginBottom: '35px',
           }}
         >
           AZARYC
@@ -44,11 +50,12 @@ export default async function Image() {
 
         <div
           style={{
-            fontSize: '26px',
-            color: '#f5f5f5',
-            letterSpacing: '4px',
+            fontSize: '22px',
+            color: 'rgba(245,245,245,0.6)',
+            letterSpacing: '0.3em',
             textTransform: 'uppercase',
-            marginBottom: '20px',
+            marginBottom: '18px',
+            fontFamily: 'Cormorant Garamond',
           }}
         >
           Cinematic · Post-Rave · Soul
@@ -56,9 +63,9 @@ export default async function Image() {
 
         <div
           style={{
-            fontSize: '20px',
-            color: 'rgba(245,245,245,0.5)',
-            letterSpacing: '1px',
+            fontSize: '17px',
+            color: 'rgba(245,245,245,0.35)',
+            letterSpacing: '0.15em',
           }}
         >
           DJ · Electronic Music Producer · Film Composer
@@ -69,15 +76,25 @@ export default async function Image() {
             position: 'absolute',
             bottom: '60px',
             right: '80px',
-            fontSize: '18px',
-            color: 'rgba(245,245,245,0.25)',
-            letterSpacing: '2px',
+            fontSize: '16px',
+            color: 'rgba(245,245,245,0.2)',
+            letterSpacing: '0.2em',
           }}
         >
           azaryc.com
         </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: [
+        {
+          name: 'Cormorant Garamond',
+          data: fontData,
+          style: 'normal',
+          weight: 300,
+        },
+      ],
+    }
   );
 }
