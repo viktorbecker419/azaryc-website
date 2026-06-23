@@ -25,8 +25,8 @@ export default function Navigation() {
           <Image
             src="/azaryc-logo.png"
             alt="AZARYC"
-            width={303}
-            height={54}
+            width={1818}
+            height={324}
             className={styles.logoImg}
             priority
           />
