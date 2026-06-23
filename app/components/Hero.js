@@ -9,8 +9,8 @@ export default function Hero() {
         <Image
           src="/azaryc-logo.png"
           alt="AZARYC"
-          width={700}
-          height={175}
+          width={303}
+          height={54}
           className={styles.logoImg}
           priority
         />
