@@ -69,7 +69,7 @@ export default function ReleasesPage() {
               <iframe
                 title={item.title}
                 style={{ border: 0, width: '100%', height: '100%' }}
-                src={`https://bandcamp.com/EmbeddedPlayer/album=${item.id}/size=large/bgcol=333333/linkcol=e32c14/artwork=big/transparent=true/`}
+                src={`https://bandcamp.com/EmbeddedPlayer/album=${item.id}/size=large/bgcol=333333/linkcol=e32c14/transparent=true/`}
                 seamless
               />
             </div>
