@@ -87,6 +87,13 @@ overflow: hidden;
 background-color: var(--color-dark);
 margin-bottom: 0.75rem;
 }
+.thumb iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
 .thumb img {
 width: 100%;
 height: 100%;
