@@ -11,13 +11,13 @@ export const metadata = {
 };
 
 const films = [
-  { title: 'Falling Forwards Slightly', director: 'Vasco Viana', thumb: 'https://vumbnail.com/1185531878.jpg' },
-  { title: 'Fatherland', director: 'Ania Johnston', thumb: 'https://vumbnail.com/1185532738.jpg' },
-  { title: 'Sculpting Wind', director: 'Gloria Sulli', thumb: 'https://vumbnail.com/1185533268.jpg' },
-  { title: 'Smetanovo', director: 'Vasco Viana', thumb: 'https://vumbnail.com/1185533604.jpg' },
-  { title: 'Lone Wolves', director: 'Elliot Gaynon', thumb: 'https://vumbnail.com/1185533857.jpg' },
-  { title: 'Movimento Spaziale', director: 'Movimento Spaziale', thumb: 'https://vumbnail.com/1185534203.jpg' },
-  { title: 'You Are So Close', director: 'Craig McNulty', thumb: 'https://vumbnail.com/1185534867.jpg' },
+  { title: 'Falling Forwards Slightly', director: 'Vasco Viana', thumb: 'https://vumbnail.com/1185531878.jpg', url: 'https://youtu.be/rYfIpzP2i60' },
+  { title: 'Fatherland', director: 'Ania Johnston', thumb: 'https://vumbnail.com/1185532738.jpg', url: 'https://youtu.be/naCphiruL-Y' },
+  { title: 'Sculpting Wind', director: 'Gloria Sulli', thumb: 'https://vumbnail.com/1185533268.jpg', url: 'https://youtu.be/ZDU9e0ExD8I' },
+  { title: 'Smetanovo', director: 'Vasco Viana', thumb: 'https://vumbnail.com/1185533604.jpg', url: 'https://youtu.be/DFQjdTV3zgY' },
+  { title: 'Lone Wolves', director: 'Elliot Gaynon', thumb: 'https://vumbnail.com/1185533857.jpg', url: 'https://youtu.be/WalF9Ycc8vo' },
+  { title: 'Movimento Spaziale', director: 'Movimento Spaziale', thumb: 'https://vumbnail.com/1185534203.jpg', url: 'https://youtu.be/_CSffGcty9s' },
+  { title: 'You Are So Close', director: 'Craig McNulty', thumb: 'https://vumbnail.com/1185534867.jpg', url: 'https://youtu.be/d6Z54yBSZzo' },
 ];
 
 export default function FilmMusicPage() {
@@ -36,7 +36,7 @@ export default function FilmMusicPage() {
         <p className={styles.sectionLabel}>Showreel</p>
         <div className={styles.videoWrap}>
           <iframe
-            src="https://player.vimeo.com/video/1185197399?color=ff3d3d&title=0&byline=0&portrait=0"
+            src="https://www.youtube.com/embed/V_cS10a9-Pw?rel=0&color=red"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
@@ -49,13 +49,19 @@ export default function FilmMusicPage() {
         <p className={styles.sectionLabel}>Film Scores</p>
         <div className={styles.grid}>
           {films.map((film) => (
-            <div className={styles.card} key={film.title}>
+            <a
+              className={styles.card}
+              key={film.title}
+              href={film.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className={styles.thumb}>
                 <img src={film.thumb} alt={film.title} loading="lazy" />
               </div>
               <p className={styles.filmTitle}>{film.title}</p>
               <p className={styles.filmDirector}>{film.director}</p>
-            </div>
+            </a>
           ))}
         </div>
 
