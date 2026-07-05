@@ -2,6 +2,7 @@ import Navigation from '../components/Navigation';
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
 import Showreel from './Showreel';
+import FilmCard from './FilmCard';
 import styles from './filmmusic.module.css';
 export const metadata = {
 title: 'Film Music',
@@ -10,13 +11,13 @@ description:
 alternates: { canonical: 'https://azaryc.com/filmmusic' },
 };
 const films = [
-{ title: 'Falling Forwards Slightly', director: 'Vasco Viana', thumb: 'https://img.youtube.com/vi/rYfIpzP2i60/hqdefault.jpg', url: 'https://youtu.be/rYfIpzP2i60' },
-{ title: 'Fatherland', director: 'Ania Johnston', thumb: 'https://img.youtube.com/vi/naCphiruL-Y/hqdefault.jpg', url: 'https://youtu.be/naCphiruL-Y' },
-{ title: 'Sculpting Wind', director: 'Gloria Sulli', thumb: 'https://img.youtube.com/vi/ZDU9e0ExD8I/hqdefault.jpg', url: 'https://youtu.be/ZDU9e0ExD8I' },
-{ title: 'Smetanovo', director: 'Vasco Viana', thumb: 'https://img.youtube.com/vi/DFQjdTV3zgY/hqdefault.jpg', url: 'https://youtu.be/DFQjdTV3zgY' },
-{ title: 'Lone Wolves', director: 'Elliot Gaynon', thumb: 'https://img.youtube.com/vi/WalF9Ycc8vo/hqdefault.jpg', url: 'https://youtu.be/WalF9Ycc8vo' },
-{ title: 'Movimento Spaziale', director: 'Movimento Spaziale', thumb: 'https://img.youtube.com/vi/_CSffGcty9s/hqdefault.jpg', url: 'https://youtu.be/_CSffGcty9s' },
-{ title: 'You Are So Close', director: 'Craig McNulty', thumb: 'https://img.youtube.com/vi/d6Z54yBSZzo/hqdefault.jpg', url: 'https://youtu.be/d6Z54yBSZzo' },
+{ title: 'Falling Forwards Slightly', director: 'Vasco Viana', videoId: 'rYfIpzP2i60' },
+{ title: 'Fatherland', director: 'Ania Johnston', videoId: 'naCphiruL-Y' },
+{ title: 'Sculpting Wind', director: 'Gloria Sulli', videoId: 'ZDU9e0ExD8I' },
+{ title: 'Smetanovo', director: 'Vasco Viana', videoId: 'DFQjdTV3zgY' },
+{ title: 'Lone Wolves', director: 'Elliot Gaynon', videoId: 'WalF9Ycc8vo' },
+{ title: 'Movimento Spaziale', director: 'Movimento Spaziale', videoId: '_CSffGcty9s' },
+{ title: 'You Are So Close', director: 'Craig McNulty', videoId: 'd6Z54yBSZzo' },
 ];
 export default function FilmMusicPage() {
 return (
@@ -36,19 +37,7 @@ Music composer for film and documentary with over 15 years of experience in elec
 <p className={styles.sectionLabel}>Film Scores</p>
 <div className={styles.grid}>
 {films.map((film) => (
-<a
-className={styles.card}
-key={film.title}
-href={film.url}
-target="_blank"
-rel="noopener noreferrer"
->
-<div className={styles.thumb}>
-<img src={film.thumb} alt={film.title} loading="lazy" />
-</div>
-<p className={styles.filmTitle}>{film.title}</p>
-<p className={styles.filmDirector}>{film.director}</p>
-</a>
+<FilmCard key={film.title} videoId={film.videoId} title={film.title} director={film.director} />
 ))}
 </div>
 <a

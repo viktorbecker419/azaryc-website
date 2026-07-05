@@ -25,10 +25,14 @@ src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
 alt={title}
 loading="lazy"
 />
+<span className={styles.cardOverlay} />
 <span className={styles.cardPlayButton}>
-<svg viewBox="0 0 24 24" width="20" height="20" fill="white">
+<svg viewBox="0 0 24 24" width="18" height="18" fill="white">
 <path d="M8 5v14l11-7z" />
 </svg>
+</span>
+<span className={styles.cardCaption}>
+{title.toUpperCase()} — MUSIC COMPOSITION BY FEDERICO CASAZZA
 </span>
 </button>
 )}
