@@ -18,7 +18,7 @@ export default function AboutPage() {
 
       <section className={`container ${styles.content}`}>
         <a
-          href="/press-kit/AZARYC-Press-Kit-2026.pdf"
+          href="/AZARYC-Press-Kit-2026.pdf"
           download
           className={styles.pressKitButton}
         >

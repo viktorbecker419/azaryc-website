@@ -87,7 +87,7 @@
 
 .pressKitButton {
   display: inline-block;
-  color: var(--color-text-dim);
+  color: var(--color-accent);
   font-size: 0.85rem;
   padding: 0.4rem 0.9rem;
   border: 1px solid currentColor;
