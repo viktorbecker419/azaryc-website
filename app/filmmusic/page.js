@@ -18,7 +18,7 @@ const films = [
 { title: 'Lone Wolves', director: 'Elliot Gaynon', videoId: 'WalF9Ycc8vo' },
 { title: 'Movimento Spaziale', director: 'Movimento Spaziale', videoId: '_CSffGcty9s' },
 { title: 'You Are So Close', director: 'Craig McNulty', videoId: 'd6Z54yBSZzo' },
-{ title: 'Gâteau à l'orange composition', director: '', videoId: 'DxqXR4-d7HQ' },
+{ title: "Gâteau à l'orange composition", director: '', videoId: 'DxqXR4-d7HQ' },
 ];
 export default function FilmMusicPage() {
 return (
