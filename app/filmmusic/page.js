@@ -18,7 +18,7 @@ const films = [
 { title: 'Lone Wolves', director: 'Elliot Gaynon', videoId: 'WalF9Ycc8vo' },
 { title: 'Movimento Spaziale', director: 'Movimento Spaziale', videoId: '_CSffGcty9s' },
 { title: 'You Are So Close', director: 'Craig McNulty', videoId: 'd6Z54yBSZzo' },
-{ title: "Gâteau à l'orange composition", director: '', videoId: 'DxqXR4-d7HQ' },
+{ title: "Gâteau à l'orange composition", director: 'Anand Tom', videoId: 'DxqXR4-d7HQ', award: 'Best Sound Design Award 2025 — Prague Actors & Film Makers Film Festival' },
 ];
 export default function FilmMusicPage() {
 return (
@@ -38,7 +38,7 @@ Music composer for film and documentary with over 15 years of experience in elec
 <p className={styles.sectionLabel}>Film Scores</p>
 <div className={styles.grid}>
 {films.map((film) => (
-<FilmCard key={film.title} videoId={film.videoId} title={film.title} director={film.director} />
+<FilmCard key={film.title} videoId={film.videoId} title={film.title} director={film.director} award={film.award} />
 ))}
 </div>
 <a

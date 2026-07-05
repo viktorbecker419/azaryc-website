@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import styles from './filmmusic.module.css';
-export default function FilmCard({ videoId, title, director }) {
+export default function FilmCard({ videoId, title, director, award }) {
 const [playing, setPlaying] = useState(false);
 return (
 <div className={styles.card}>
@@ -37,6 +37,11 @@ loading="lazy"
 </button>
 )}
 </div>
+{award && (
+  <p className={styles.filmAward}>
+    <span className={styles.awardIcon}>🏆</span> {award}
+  </p>
+)}
 <p className={styles.filmTitle}>{title}</p>
 <p className={styles.filmDirector}>{director}</p>
 </div>
