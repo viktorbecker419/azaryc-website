@@ -8,6 +8,20 @@ export const metadata = {
   description:
     'Booking and general enquiries for AZARYC. DJ bookings, live performances, and collaborations. Contact: azarycmusic@gmail.com',
   alternates: { canonical: 'https://azaryc.com/contact' },
+  openGraph: {
+    title: 'Get in Touch — AZARYC',
+    description:
+      'Booking and general enquiries for AZARYC. DJ bookings, live performances, and collaborations. Contact: azarycmusic@gmail.com',
+    url: 'https://azaryc.com/contact',
+    siteName: 'AZARYC',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Get in Touch — AZARYC',
+    description:
+      'Booking and general enquiries for AZARYC. DJ bookings, live performances, and collaborations. Contact: azarycmusic@gmail.com',
+  },
 };
 
 export default function ContactPage() {

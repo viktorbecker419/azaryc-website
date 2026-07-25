@@ -8,6 +8,20 @@ export const metadata = {
   description:
     'Upcoming live shows and DJ sets by AZARYC. Electronic music performances across Europe and worldwide. Booking: azarycmusic@gmail.com',
   alternates: { canonical: 'https://azaryc.com/shows' },
+  openGraph: {
+    title: 'Shows — AZARYC',
+    description:
+      'Upcoming live shows and DJ sets by AZARYC. Electronic music performances across Europe and worldwide. Booking: azarycmusic@gmail.com',
+    url: 'https://azaryc.com/shows',
+    siteName: 'AZARYC',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Shows — AZARYC',
+    description:
+      'Upcoming live shows and DJ sets by AZARYC. Electronic music performances across Europe and worldwide. Booking: azarycmusic@gmail.com',
+  },
 };
 
 export default function ShowsPage() {

@@ -9,6 +9,20 @@ title: 'Film Music',
 description:
 'Film music composition and sound design by AZARYC. Original scores for international film and documentary productions since 2021.',
 alternates: { canonical: 'https://azaryc.com/filmmusic' },
+openGraph: {
+  title: 'Film Music — AZARYC',
+  description:
+    'Film music composition and sound design by AZARYC. Original scores for international film and documentary productions since 2021.',
+  url: 'https://azaryc.com/filmmusic',
+  siteName: 'AZARYC',
+  type: 'website',
+},
+twitter: {
+  card: 'summary_large_image',
+  title: 'Film Music — AZARYC',
+  description:
+    'Film music composition and sound design by AZARYC. Original scores for international film and documentary productions since 2021.',
+},
 };
 const films = [
 { title: 'Falling Forwards Slightly', director: 'Vasco Viana', videoId: 'rYfIpzP2i60' },
