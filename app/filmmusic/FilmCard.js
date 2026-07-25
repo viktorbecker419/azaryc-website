@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 import styles from './filmmusic.module.css';
 export default function FilmCard({ videoId, title, director, award }) {
 const [playing, setPlaying] = useState(false);
@@ -20,10 +21,12 @@ className={styles.cardPlayFacade}
 onClick={() => setPlaying(true)}
 aria-label={`Play ${title}`}
 >
-<img
+<Image
 src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
 alt={title}
-loading="lazy"
+fill
+sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+style={{ objectFit: 'cover' }}
 />
 <span className={styles.cardOverlay} />
 <span className={styles.cardPlayButton}>

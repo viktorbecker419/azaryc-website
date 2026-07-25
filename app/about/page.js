@@ -1,6 +1,7 @@
 import Navigation from '../components/Navigation';
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
+import BreadcrumbJsonLd from '../components/BreadcrumbJsonLd';
 import styles from '../components/Section.module.css';
 
 export const metadata = {
@@ -27,6 +28,12 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: 'https://azaryc.com' },
+          { name: 'About', url: 'https://azaryc.com/about' },
+        ]}
+      />
       <Navigation />
       <PageHeader eyebrow="Biography" title="About" />
 

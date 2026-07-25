@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 import styles from './filmmusic.module.css';
 export default function Showreel({ videoId, title }) {
 const [playing, setPlaying] = useState(false);
@@ -19,9 +20,13 @@ className={styles.playFacade}
 onClick={() => setPlaying(true)}
 aria-label={`Play ${title}`}
 >
-<img
+<Image
 src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
 alt={title}
+fill
+sizes="(max-width: 768px) 100vw, 700px"
+style={{ objectFit: 'cover' }}
+priority
 />
 <span className={styles.playButton}>
 <svg viewBox="0 0 24 24" width="28" height="28" fill="white">

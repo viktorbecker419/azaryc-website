@@ -1,6 +1,7 @@
 import Navigation from '../components/Navigation';
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
+import BreadcrumbJsonLd from '../components/BreadcrumbJsonLd';
 import styles from './shows.module.css';
 
 export const metadata = {
@@ -27,6 +28,12 @@ export const metadata = {
 export default function ShowsPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: 'https://azaryc.com' },
+          { name: 'Shows', url: 'https://azaryc.com/shows' },
+        ]}
+      />
       <Navigation />
       <PageHeader eyebrow="Live" title="Shows" />
 

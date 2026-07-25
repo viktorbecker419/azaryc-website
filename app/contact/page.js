@@ -1,6 +1,7 @@
 import Navigation from '../components/Navigation';
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
+import BreadcrumbJsonLd from '../components/BreadcrumbJsonLd';
 import styles from '../components/Section.module.css';
 
 export const metadata = {
@@ -27,6 +28,12 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: 'https://azaryc.com' },
+          { name: 'Get in Touch', url: 'https://azaryc.com/contact' },
+        ]}
+      />
       <Navigation />
       <PageHeader eyebrow="Booking" title="Get in Touch" />
 
