@@ -6,6 +6,9 @@ export default function Hero() {
     <section className={styles.hero} id="hero">
       <div className={styles.overlay} />
       <div className={`container ${styles.content}`}>
+        <h1 className="sr-only">
+          AZARYC — Cinematic, Post-Rave, Soul: DJ, Electronic Music Producer &amp; Film Composer
+        </h1>
         <Image
           src="/azaryc-logo.png"
           alt="AZARYC"

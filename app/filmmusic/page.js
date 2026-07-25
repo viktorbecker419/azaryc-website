@@ -1,15 +1,32 @@
 import Navigation from '../components/Navigation';
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
+import BreadcrumbJsonLd from '../components/BreadcrumbJsonLd';
 import Showreel from './Showreel';
 import FilmCard from './FilmCard';
+import FilmMusicJsonLd from './FilmMusicJsonLd';
 import styles from './filmmusic.module.css';
 export const metadata = {
 title: 'Film Music',
 description:
 'Film music composition and sound design by AZARYC. Original scores for international film and documentary productions since 2021.',
 alternates: { canonical: 'https://azaryc.com/filmmusic' },
+openGraph: {
+  title: 'Film Music — AZARYC',
+  description:
+    'Film music composition and sound design by AZARYC. Original scores for international film and documentary productions since 2021.',
+  url: 'https://azaryc.com/filmmusic',
+  siteName: 'AZARYC',
+  type: 'website',
+},
+twitter: {
+  card: 'summary_large_image',
+  title: 'Film Music — AZARYC',
+  description:
+    'Film music composition and sound design by AZARYC. Original scores for international film and documentary productions since 2021.',
+},
 };
+const showreel = { videoId: 'V_cS10a9-Pw', title: 'Film Music Showreel' };
 const films = [
 { title: 'Falling Forwards Slightly', director: 'Vasco Viana', videoId: 'rYfIpzP2i60' },
 { title: 'Fatherland', director: 'Ania Johnston', videoId: 'naCphiruL-Y' },
@@ -23,6 +40,13 @@ const films = [
 export default function FilmMusicPage() {
 return (
 <>
+<BreadcrumbJsonLd
+  items={[
+    { name: 'Home', url: 'https://azaryc.com' },
+    { name: 'Film Music', url: 'https://azaryc.com/filmmusic' },
+  ]}
+/>
+<FilmMusicJsonLd showreel={showreel} films={films} />
 <Navigation />
 <PageHeader eyebrow="Composition" title="Film Music" />
 <section className={`container ${styles.intro}`}>
@@ -32,7 +56,7 @@ Music composer for film and documentary with over 15 years of experience in elec
 </section>
 <section className={`container ${styles.showreelSection}`}>
 <p className={styles.sectionLabel}>Showreel</p>
-<Showreel videoId="V_cS10a9-Pw" title="Film Music Showreel" />
+<Showreel videoId={showreel.videoId} title={showreel.title} />
 </section>
 <section className={`container ${styles.filmsSection}`}>
 <p className={styles.sectionLabel}>Film Scores</p>

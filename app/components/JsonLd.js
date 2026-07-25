@@ -2,11 +2,13 @@ export default function JsonLd() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'MusicGroup',
+    '@id': 'https://azaryc.com/#artist',
     name: 'AZARYC',
     alternateName: 'Rico Casazza',
     description:
       'AZARYC is the alias of Rico Casazza — DJ, electronic music producer, film composer and sound designer. Electro, IDM, Minimal and Techno with cinematic depth.',
     url: 'https://azaryc.com',
+    image: 'https://azaryc.com/azaryc-logo.png',
     genre: ['Electro', 'IDM', 'Minimal Techno', 'Techno', 'Ambient'],
     sameAs: [
       'https://ricocasazza.bandcamp.com',

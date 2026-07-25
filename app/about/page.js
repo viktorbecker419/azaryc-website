@@ -1,6 +1,7 @@
 import Navigation from '../components/Navigation';
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
+import BreadcrumbJsonLd from '../components/BreadcrumbJsonLd';
 import styles from '../components/Section.module.css';
 
 export const metadata = {
@@ -8,11 +9,31 @@ export const metadata = {
   description:
     'Biography of AZARYC (Rico Casazza) — DJ, electronic music producer, film composer and sound designer. 20 years in the underground, from London to Prague.',
   alternates: { canonical: 'https://azaryc.com/about' },
+  openGraph: {
+    title: 'About — AZARYC',
+    description:
+      'Biography of AZARYC (Rico Casazza) — DJ, electronic music producer, film composer and sound designer. 20 years in the underground, from London to Prague.',
+    url: 'https://azaryc.com/about',
+    siteName: 'AZARYC',
+    type: 'profile',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About — AZARYC',
+    description:
+      'Biography of AZARYC (Rico Casazza) — DJ, electronic music producer, film composer and sound designer. 20 years in the underground, from London to Prague.',
+  },
 };
 
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: 'https://azaryc.com' },
+          { name: 'About', url: 'https://azaryc.com/about' },
+        ]}
+      />
       <Navigation />
       <PageHeader eyebrow="Biography" title="About" />
 

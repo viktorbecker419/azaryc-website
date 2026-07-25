@@ -1,6 +1,7 @@
 import Navigation from '../components/Navigation';
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
+import BreadcrumbJsonLd from '../components/BreadcrumbJsonLd';
 import styles from '../components/Section.module.css';
 
 export const metadata = {
@@ -8,11 +9,31 @@ export const metadata = {
   description:
     'Booking and general enquiries for AZARYC. DJ bookings, live performances, and collaborations. Contact: azarycmusic@gmail.com',
   alternates: { canonical: 'https://azaryc.com/contact' },
+  openGraph: {
+    title: 'Get in Touch — AZARYC',
+    description:
+      'Booking and general enquiries for AZARYC. DJ bookings, live performances, and collaborations. Contact: azarycmusic@gmail.com',
+    url: 'https://azaryc.com/contact',
+    siteName: 'AZARYC',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Get in Touch — AZARYC',
+    description:
+      'Booking and general enquiries for AZARYC. DJ bookings, live performances, and collaborations. Contact: azarycmusic@gmail.com',
+  },
 };
 
 export default function ContactPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: 'https://azaryc.com' },
+          { name: 'Get in Touch', url: 'https://azaryc.com/contact' },
+        ]}
+      />
       <Navigation />
       <PageHeader eyebrow="Booking" title="Get in Touch" />
 

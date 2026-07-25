@@ -1,6 +1,7 @@
 import Navigation from '../components/Navigation';
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
+import BreadcrumbJsonLd from '../components/BreadcrumbJsonLd';
 import styles from './shows.module.css';
 
 export const metadata = {
@@ -8,11 +9,31 @@ export const metadata = {
   description:
     'Upcoming live shows and DJ sets by AZARYC. Electronic music performances across Europe and worldwide. Booking: azarycmusic@gmail.com',
   alternates: { canonical: 'https://azaryc.com/shows' },
+  openGraph: {
+    title: 'Shows — AZARYC',
+    description:
+      'Upcoming live shows and DJ sets by AZARYC. Electronic music performances across Europe and worldwide. Booking: azarycmusic@gmail.com',
+    url: 'https://azaryc.com/shows',
+    siteName: 'AZARYC',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Shows — AZARYC',
+    description:
+      'Upcoming live shows and DJ sets by AZARYC. Electronic music performances across Europe and worldwide. Booking: azarycmusic@gmail.com',
+  },
 };
 
 export default function ShowsPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: 'https://azaryc.com' },
+          { name: 'Shows', url: 'https://azaryc.com/shows' },
+        ]}
+      />
       <Navigation />
       <PageHeader eyebrow="Live" title="Shows" />
 
