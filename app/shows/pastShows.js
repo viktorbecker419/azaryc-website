@@ -245,5 +245,6 @@ export const pastShows = [
   { date: '2008-05-23', event: 'Minimal Carnival', location: 'London, UK', url: 'https://ra.co/events/54043' },
   { date: '2007-12-08', event: 'Recreation', location: 'London, UK', url: 'https://ra.co/events/37490' },
   { date: '2007-07-20', event: 'Minimal Carnival', location: 'London, UK', url: 'https://ra.co/events/27738' },
+  { date: '2007-07-06', event: 'Antiworld 070707', location: 'London, UK', url: 'https://www.goabase.net/party/antiworld-070707/27837' },
   { date: '2006-06-03', event: 'Techno Marathon', location: 'London, UK', url: 'https://ra.co/events/670491' },
 ];
