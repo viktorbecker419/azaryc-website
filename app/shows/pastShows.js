@@ -67,6 +67,7 @@ export const pastShows = [
   { date: '2022-12-24', event: 'AZAYA Festival', location: 'Goa, India' },
   { date: '2022-12-17', event: 'Boiler Room Goa', location: 'Goa, India', url: 'https://www.youtube.com/watch?v=cdxEcFraGIM' },
   { date: '2022-11-13', event: 'Locals District Festival', location: 'Alwar, Rajasthan, India', url: 'https://www.instagram.com/reel/Ck5VcMyBDiO/' },
+  { date: '2022-05-28', event: 'Emptiness Form Vinyl Release — GRID', location: 'Prague, Czech Republic' },
   { date: '2022-04-23', event: 'Club Pandora', location: 'Mumbai, India', url: 'https://www.instagram.com/p/Ccu8eowslaW/' },
   { date: '2022-04-22', event: 'Salud Goa', location: 'Goa, India', url: 'https://www.instagram.com/p/CcxIRHbDgMk/' },
   { date: '2022-04-17', event: 'Alchemy Festival', location: 'Pune, India', url: 'https://www.instagram.com/p/Ccb-aJABzmz/' },
