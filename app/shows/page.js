@@ -63,7 +63,13 @@ export default function ShowsPage() {
             <p className={styles.pastShowsRow} key={`${show.date}-${i}`}>
               <span className={styles.pastShowsDate}>{formatShowDate(show.date)}</span>
               {' — '}
-              {show.event}
+              {show.url ? (
+                <a href={show.url} target="_blank" rel="noopener noreferrer" className={styles.pastShowsLink}>
+                  {show.event}
+                </a>
+              ) : (
+                show.event
+              )}
               {' — '}
               {show.location}
             </p>
