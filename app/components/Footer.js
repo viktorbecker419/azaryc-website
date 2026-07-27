@@ -4,12 +4,20 @@ const socials = [
   {
     label: 'Instagram',
     href: 'https://www.instagram.com/ricocasazza_music',
-    color: '#833AB4',
     icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-        <circle cx="12" cy="12" r="4"/>
-        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <defs>
+          <radialGradient id="ig-gradient" cx="30%" cy="107%" r="150%">
+            <stop offset="0%" stopColor="#fdf497" />
+            <stop offset="5%" stopColor="#fdf497" />
+            <stop offset="45%" stopColor="#fd5949" />
+            <stop offset="60%" stopColor="#d6249f" />
+            <stop offset="90%" stopColor="#285AEB" />
+          </radialGradient>
+        </defs>
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="url(#ig-gradient)"/>
+        <circle cx="12" cy="12" r="4" stroke="url(#ig-gradient)"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="url(#ig-gradient)" stroke="none"/>
       </svg>
     ),
   },
@@ -78,9 +86,10 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={s.label}
-              style={s.color ? { color: s.color } : undefined}
             >
-              {s.icon}
+              <span className={styles.icon} style={s.color ? { color: s.color } : undefined}>
+                {s.icon}
+              </span>
               <span>{s.label}</span>
             </a>
           ))}
