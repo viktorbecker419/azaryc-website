@@ -1,5 +1,47 @@
 .empty {
-  padding: 5rem 0 8rem;
+  padding: 5rem 0 3rem;
+}
+
+.pastShows {
+  padding: 1rem 0 8rem;
+}
+
+.pastShowsHeading {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.pastShowsList {
+  max-width: 900px;
+}
+
+.pastShowsRow {
+  font-size: 0.9rem;
+  color: var(--color-text-dim);
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pastShowsRow:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.pastShowsDate {
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+.pastShowsLink {
+  color: inherit;
+  border-bottom: 1px solid var(--color-border);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.pastShowsLink:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
 .emptyText {

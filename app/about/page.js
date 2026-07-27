@@ -38,13 +38,6 @@ export default function AboutPage() {
       <PageHeader eyebrow="Biography" title="About" />
 
       <section className={`container ${styles.content}`}>
-        <a
-          href="/AZARYC-Press-Kit-2026.pdf"
-          download
-          className={styles.pressKitButton}
-        >
-          Download Press Kit
-        </a>
         <p className={styles.paragraph}>
           Italian-born and London-forged, AZARYC is the alias of Rico Casazza — DJ, electronic music producer, film composer, and sound designer. A life built entirely around sound.
         </p>
@@ -63,6 +56,13 @@ export default function AboutPage() {
         <p className={styles.paragraph}>
           Currently based in Prague, he continues to push his vision at the intersection of electronic music and sound art.
         </p>
+        <a
+          href="/AZARYC-Press-Kit-2026.pdf"
+          download
+          className={styles.pressKitButton}
+        >
+          Download Press Kit
+        </a>
       </section>
 
       <Footer />
