@@ -17,9 +17,6 @@ export default function Page() {
         <p className={styles.paragraph}>
           He has performed across Europe, Mexico, India, and the United States, with highlights including Fabric London and Boiler Room Goa, and composes original film scores for international productions.
         </p>
-        <a href="/about" className={styles.button}>
-          Read the full story
-        </a>
       </section>
 
       <Footer />
