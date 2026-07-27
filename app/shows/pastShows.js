@@ -51,6 +51,7 @@ export const pastShows = [
   { date: '2023-04-21', event: 'Nu Spirit Bar presents Rico Casazza & wnchnz', location: 'Bratislava, Slovakia' },
   { date: '2023-03-31', event: 'Cross x Afterhours', location: 'Prague, Czech Republic' },
   { date: '2023-03-18', event: "Republic Artists: Rico Casazza, 90z, Thomas Tesla, Daniel Neighbour", location: 'Prague, Czech Republic' },
+  { date: '2022-12-17', event: 'Boiler Room Goa', location: 'Goa, India' },
   { date: '2022-02-19', event: 'Republic Artists: Rico Casazza, Thomas Tesla, Daniel Neighbour, Asi, Unjack, Ezwell, Mark', location: 'Prague, Czech Republic' },
   { date: '2021-12-31', event: 'NYE Macrave 2021', location: 'Prague, Czech Republic' },
   { date: '2021-10-23', event: 'Republic Artists: Rico Casazza, Kozber, Silhouette, Thomas Tesla, Sammy Boyko, Shiloff', location: 'Prague, Czech Republic' },
