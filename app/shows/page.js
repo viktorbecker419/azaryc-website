@@ -15,6 +15,30 @@ function formatShowDate(iso) {
   return `${day} ${MONTHS[month - 1]} ${year}`;
 }
 
+const COUNTRY_FLAGS = {
+  India: '🇮🇳',
+  Thailand: '🇹🇭',
+  Germany: '🇩🇪',
+  Slovakia: '🇸🇰',
+  UK: '🇬🇧',
+  USA: '🇺🇸',
+  Croatia: '🇭🇷',
+  Mexico: '🇲🇽',
+  'Czech Republic': '🇨🇿',
+  Ireland: '🇮🇪',
+  Nepal: '🇳🇵',
+  Cambodia: '🇰🇭',
+  Poland: '🇵🇱',
+  Portugal: '🇵🇹',
+  Switzerland: '🇨🇭',
+  Georgia: '🇬🇪',
+};
+
+function locationFlag(location) {
+  const country = location.split(',').pop().trim();
+  return COUNTRY_FLAGS[country] || '';
+}
+
 export const metadata = {
   title: 'Shows',
   description:
@@ -73,6 +97,7 @@ export default function ShowsPage() {
               )}
               {' — '}
               {show.location}
+              {locationFlag(show.location) && ` ${locationFlag(show.location)}`}
             </p>
           ))}
         </div>
