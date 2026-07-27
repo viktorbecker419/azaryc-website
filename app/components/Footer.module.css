@@ -32,6 +32,11 @@
   color: var(--color-accent);
 }
 
+.icon {
+  display: flex;
+  align-items: center;
+}
+
 .bottom {
   text-align: center;
   font-size: 0.8rem;
