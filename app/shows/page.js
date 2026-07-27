@@ -2,7 +2,18 @@ import Navigation from '../components/Navigation';
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
 import BreadcrumbJsonLd from '../components/BreadcrumbJsonLd';
+import { pastShows } from './pastShows';
 import styles from './shows.module.css';
+
+const MONTHS = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December',
+];
+
+function formatShowDate(iso) {
+  const [year, month, day] = iso.split('-').map(Number);
+  return `${day} ${MONTHS[month - 1]} ${year}`;
+}
 
 export const metadata = {
   title: 'Shows',
@@ -43,6 +54,21 @@ export default function ShowsPage() {
           For booking enquiries, get in touch at{' '}
           <a href="mailto:azarycmusic@gmail.com">azarycmusic@gmail.com</a>
         </p>
+      </section>
+
+      <section className={`container ${styles.pastShows}`}>
+        <h2 className={styles.pastShowsHeading}>Past Shows</h2>
+        <div className={styles.pastShowsList}>
+          {pastShows.map((show, i) => (
+            <p className={styles.pastShowsRow} key={`${show.date}-${i}`}>
+              <span className={styles.pastShowsDate}>{formatShowDate(show.date)}</span>
+              {' — '}
+              {show.event}
+              {' — '}
+              {show.location}
+            </p>
+          ))}
+        </div>
       </section>
 
       <Footer />
