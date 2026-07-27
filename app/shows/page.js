@@ -49,6 +49,7 @@ export default function ShowsPage() {
       <PageHeader eyebrow="Live" title="Shows" />
 
       <section className={`container ${styles.empty}`}>
+        <h2 className={styles.pastShowsHeading}>Upcoming Shows</h2>
         <p className={styles.emptyText}>No upcoming shows at the moment.</p>
         <p className={styles.emptySubtext}>
           For booking enquiries, get in touch at{' '}
