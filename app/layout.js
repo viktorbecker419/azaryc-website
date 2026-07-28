@@ -1,6 +1,9 @@
+import Script from 'next/script';
 import { Cormorant_Garamond, Inter } from 'next/font/google';
 import './globals.css';
 import JsonLd from './components/JsonLd';
+
+const GA_MEASUREMENT_ID = 'G-SW90ZBFK8T';
 
 const cormorant = Cormorant_Garamond({
   weight: ['300', '400', '500'],
@@ -72,6 +75,18 @@ export default function RootLayout({ children }) {
       <body>
         <JsonLd />
         {children}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
       </body>
     </html>
   );
