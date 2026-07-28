@@ -1,9 +1,14 @@
 import { ImageResponse } from 'next/og';
+import { readFile } from 'fs/promises';
+import path from 'path';
 
 export const size = { width: 32, height: 32 };
 export const contentType = 'image/png';
 
-export default function Icon() {
+export default async function Icon() {
+  const markData = await readFile(path.join(process.cwd(), 'public/azaryc-a-mark.png'));
+  const markBase64 = `data:image/png;base64,${markData.toString('base64')}`;
+
   return new ImageResponse(
     (
       <div
@@ -14,12 +19,9 @@ export default function Icon() {
           alignItems: 'center',
           justifyContent: 'center',
           background: '#0a0a0a',
-          color: '#ff3d3d',
-          fontSize: 22,
-          fontWeight: 700,
         }}
       >
-        A
+        <img src={markBase64} width={22} height={22} style={{ objectFit: 'contain' }} />
       </div>
     ),
     { ...size }
