@@ -3,6 +3,7 @@ import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
 import BreadcrumbJsonLd from '../components/BreadcrumbJsonLd';
 import { pastShows } from './pastShows';
+import { upcomingShows } from './upcomingShows';
 import styles from './shows.module.css';
 
 const MONTHS = [
@@ -37,6 +38,25 @@ const COUNTRY_FLAGS = {
 function locationFlag(location) {
   const country = location.split(',').pop().trim();
   return COUNTRY_FLAGS[country] || '';
+}
+
+function ShowRow({ show }) {
+  return (
+    <p className={styles.pastShowsRow}>
+      <span className={styles.pastShowsDate}>{formatShowDate(show.date)}</span>
+      {' — '}
+      {show.url ? (
+        <a href={show.url} target="_blank" rel="noopener noreferrer" className={styles.pastShowsLink}>
+          {show.event}
+        </a>
+      ) : (
+        show.event
+      )}
+      {' — '}
+      {show.location}
+      {locationFlag(show.location) && ` ${locationFlag(show.location)}`}
+    </p>
+  );
 }
 
 export const metadata = {
@@ -74,7 +94,15 @@ export default function ShowsPage() {
 
       <section className={`container ${styles.empty}`}>
         <h2 className={styles.pastShowsHeading}>Upcoming Shows</h2>
-        <p className={styles.emptyText}>No upcoming shows at the moment.</p>
+        {upcomingShows.length > 0 ? (
+          <div className={styles.pastShowsList}>
+            {upcomingShows.map((show, i) => (
+              <ShowRow show={show} key={`${show.date}-${i}`} />
+            ))}
+          </div>
+        ) : (
+          <p className={styles.emptyText}>No upcoming shows at the moment.</p>
+        )}
         <p className={styles.emptySubtext}>
           For booking enquiries, get in touch at{' '}
           <a href="mailto:azarycmusic@gmail.com">azarycmusic@gmail.com</a>
@@ -85,20 +113,7 @@ export default function ShowsPage() {
         <h2 className={styles.pastShowsHeading}>Past Shows</h2>
         <div className={styles.pastShowsList}>
           {pastShows.map((show, i) => (
-            <p className={styles.pastShowsRow} key={`${show.date}-${i}`}>
-              <span className={styles.pastShowsDate}>{formatShowDate(show.date)}</span>
-              {' — '}
-              {show.url ? (
-                <a href={show.url} target="_blank" rel="noopener noreferrer" className={styles.pastShowsLink}>
-                  {show.event}
-                </a>
-              ) : (
-                show.event
-              )}
-              {' — '}
-              {show.location}
-              {locationFlag(show.location) && ` ${locationFlag(show.location)}`}
-            </p>
+            <ShowRow show={show} key={`${show.date}-${i}`} />
           ))}
         </div>
       </section>
