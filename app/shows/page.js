@@ -90,7 +90,7 @@ export default function ShowsPage() {
         ]}
       />
       <Navigation />
-      <PageHeader eyebrow="Live" title="Shows" />
+      <PageHeader title="Shows" />
 
       <section className={`container ${styles.empty}`}>
         <h2 className={styles.pastShowsHeading}>Upcoming Shows</h2>
