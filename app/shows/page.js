@@ -2,6 +2,7 @@ import Navigation from '../components/Navigation';
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
 import BreadcrumbJsonLd from '../components/BreadcrumbJsonLd';
+import EventJsonLd from '../components/EventJsonLd';
 import { pastShows } from './pastShows';
 import { upcomingShows } from './upcomingShows';
 import styles from './shows.module.css';
@@ -89,6 +90,7 @@ export default function ShowsPage() {
           { name: 'Shows', url: 'https://azaryc.com/shows' },
         ]}
       />
+      {upcomingShows.length > 0 && <EventJsonLd shows={upcomingShows} />}
       <Navigation />
       <PageHeader title="Shows" />
 
