@@ -35,12 +35,21 @@ export default function ContactPage() {
         ]}
       />
       <Navigation />
-      <PageHeader eyebrow="Booking" title="Get in Touch" />
+      <PageHeader title="Get in Touch" />
 
       <section className={`container ${styles.contactBlock}`}>
         <p className={styles.paragraph}>
           For bookings, gigs, and general enquiries, reach out directly.
         </p>
+
+        <a
+          href="https://aab37926.sibforms.com/serve/MUIFAA81rrIE_x3r_H4x3jp8ghehb3gLVXuXydsPCgrZ7V6tpooB5SQX97IcotO6KuFrE-xKfdJXPXAtRs33beqQthV5Jc8tqf4xuwfALqsriAsJN91QhkdslOmqqAj1U5jO2R9l8UmqxMKixJMF5HnVjlOqUEkrjTDRXe9CUvo8IZg0mEJlNLOAxNgmeXw6-47w8P56_phIiDJBtA=="
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.button}
+        >
+          Join the Mailing List
+        </a>
 
         <a href="mailto:azarycmusic@gmail.com" className={styles.contactEmail}>
           azarycmusic@gmail.com

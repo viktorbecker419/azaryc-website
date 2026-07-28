@@ -35,7 +35,7 @@ export default function AboutPage() {
         ]}
       />
       <Navigation />
-      <PageHeader eyebrow="Biography" title="About" />
+      <PageHeader title="About" />
 
       <section className={`container ${styles.content}`}>
         <p className={styles.paragraph}>

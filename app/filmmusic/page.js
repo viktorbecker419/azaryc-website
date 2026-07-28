@@ -48,7 +48,7 @@ return (
 />
 <FilmMusicJsonLd showreel={showreel} films={films} />
 <Navigation />
-<PageHeader eyebrow="Composition" title="Film Music" />
+<PageHeader title="Film Music" />
 <section className={`container ${styles.intro}`}>
 <p className={styles.bio}>
 Music composer for film and documentary with over 15 years of experience in electronic music production. I merge production expertise with a cinematic and emotional approach to sound — crafting original scores that fuse texture, atmosphere, and narrative for international productions.

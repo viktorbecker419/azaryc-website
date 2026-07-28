@@ -47,7 +47,7 @@ export default function ReleasesPage() {
   return (
     <>
       <Navigation />
-      <PageHeader eyebrow="Discography" title="Releases" />
+      <PageHeader title="Releases" />
 
       <div className={`container ${styles.page}`}>
 
