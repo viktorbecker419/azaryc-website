@@ -9,7 +9,6 @@ import styles from './Navigation.module.css';
 const links = [
   { label: 'About', href: '/about' },
   { label: 'Releases', href: '/releases' },
-  { label: 'Discography', href: 'https://www.discogs.com/artist/824607-Rico-Casazza', external: true },
   { label: 'Film Music', href: '/filmmusic' },
   { label: 'Shows', href: '/shows' },
   { label: 'Get in Touch', href: '/contact' },
