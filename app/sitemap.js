@@ -29,6 +29,12 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: 'https://azaryc.com/youtube',
+      lastModified: LAST_MODIFIED,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
       url: 'https://azaryc.com/contact',
       lastModified: LAST_MODIFIED,
       changeFrequency: 'yearly',

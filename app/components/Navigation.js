@@ -10,6 +10,7 @@ const links = [
   { label: 'About', href: '/about' },
   { label: 'Releases', href: '/releases' },
   { label: 'Film Music', href: '/filmmusic' },
+  { label: 'YouTube', href: '/youtube' },
   { label: 'Shows', href: '/shows' },
   { label: 'Get in Touch', href: '/contact' },
 ];
