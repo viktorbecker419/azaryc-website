@@ -4,7 +4,8 @@ import Footer from '../components/Footer';
 import BreadcrumbJsonLd from '../components/BreadcrumbJsonLd';
 import YouTubeJsonLd from './YouTubeJsonLd';
 import YouTubeGrid from './YouTubeGrid';
-import { getYoutubeVideos } from './getVideos';
+import ChannelHeader from './ChannelHeader';
+import { getYoutubeData } from './getVideos';
 import styles from './youtube.module.css';
 
 const DESCRIPTION =
@@ -31,7 +32,7 @@ export const metadata = {
 export const revalidate = 3600;
 
 export default async function YouTubePage() {
-  const videos = await getYoutubeVideos();
+  const { channel, videos } = await getYoutubeData();
 
   return (
     <>
@@ -44,10 +45,14 @@ export default async function YouTubePage() {
       {videos.length > 0 && <YouTubeJsonLd videos={videos} />}
       <Navigation />
       <PageHeader title="YouTube" />
+      <ChannelHeader channel={channel} />
 
       <section className="container">
         {videos.length > 0 ? (
-          <YouTubeGrid videos={videos} />
+          <>
+            <p className={styles.videosLabel}>Videos</p>
+            <YouTubeGrid videos={videos} />
+          </>
         ) : (
           <p className={styles.emptyText}>
             No videos available at the moment. In the meantime, check out{' '}
