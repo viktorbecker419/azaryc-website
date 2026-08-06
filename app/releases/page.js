@@ -47,7 +47,16 @@ export default function ReleasesPage() {
   return (
     <>
       <Navigation />
-      <PageHeader title="Releases" />
+      <PageHeader title="Releases">
+        <a
+          href="https://www.discogs.com/artist/824607-Rico-Casazza"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.discogsLink}
+        >
+          For full discography, click here
+        </a>
+      </PageHeader>
 
       <div className={`container ${styles.page}`}>
 

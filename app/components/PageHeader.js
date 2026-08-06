@@ -12,14 +12,14 @@ const fadeUp = {
   }),
 };
 
-export default function PageHeader({ eyebrow, title }) {
+export default function PageHeader({ eyebrow, title, children, animate = true }) {
   return (
     <header className={styles.header}>
       <div className="container">
         {eyebrow && (
           <motion.p
             className={styles.eyebrow}
-            initial="hidden"
+            initial={animate ? 'hidden' : false}
             animate="visible"
             custom={0}
             variants={fadeUp}
@@ -29,13 +29,23 @@ export default function PageHeader({ eyebrow, title }) {
         )}
         <motion.h1
           className={styles.title}
-          initial="hidden"
+          initial={animate ? 'hidden' : false}
           animate="visible"
           custom={eyebrow ? 0.15 : 0}
           variants={fadeUp}
         >
           {title}
         </motion.h1>
+        {children && (
+          <motion.div
+            initial={animate ? 'hidden' : false}
+            animate="visible"
+            custom={eyebrow ? 0.3 : 0.15}
+            variants={fadeUp}
+          >
+            {children}
+          </motion.div>
+        )}
       </div>
     </header>
   );
