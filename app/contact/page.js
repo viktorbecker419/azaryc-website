@@ -54,15 +54,6 @@ export default function ContactPage() {
         <a href="mailto:azarycmusic@gmail.com" className={styles.contactEmail}>
           azarycmusic@gmail.com
         </a>
-
-        <div className={styles.socialRow}>
-          <a href="https://www.instagram.com/ricocasazza_music" target="_blank" rel="noopener noreferrer">
-            Instagram
-          </a>
-          <a href="https://soundcloud.com/ricocasazza" target="_blank" rel="noopener noreferrer">
-            SoundCloud
-          </a>
-        </div>
       </section>
 
       <Footer />
