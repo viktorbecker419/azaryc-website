@@ -134,7 +134,6 @@
 
 .button {
   display: inline-block;
-  margin-top: 1rem;
   padding: 0.9rem 2rem;
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -155,13 +154,24 @@
   max-width: 600px;
 }
 
+.contactRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.divider {
+  color: var(--color-text-faint);
+}
+
 .contactEmail {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 4vw, 2.1rem);
   letter-spacing: 1px;
   color: var(--color-accent);
   display: inline-block;
-  margin: 1.5rem 0 2.5rem;
 }
 
 .secondaryLink {
