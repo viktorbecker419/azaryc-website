@@ -54,6 +54,13 @@ export default function ContactPage() {
         <a href="mailto:azarycmusic@gmail.com" className={styles.contactEmail}>
           azarycmusic@gmail.com
         </a>
+
+        <p className={styles.secondaryLink}>
+          Film & sound design work:{' '}
+          <a href="https://federicocasazza.com/" target="_blank" rel="noopener noreferrer">
+            federicocasazza.com
+          </a>
+        </p>
       </section>
 
       <Footer />

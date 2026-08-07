@@ -163,3 +163,20 @@
   display: inline-block;
   margin: 1.5rem 0 2.5rem;
 }
+
+.secondaryLink {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-text-faint);
+}
+
+.secondaryLink a {
+  color: var(--color-text-faint);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.25s ease;
+}
+
+.secondaryLink a:hover {
+  color: var(--color-accent);
+}
