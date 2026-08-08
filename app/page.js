@@ -26,7 +26,7 @@ export default function Page() {
             title="New Nice Pop Song"
             className={styles.newsPlayer}
             style={{ border: 0 }}
-            src="https://bandcamp.com/EmbeddedPlayer/track=2920915203/size=large/bgcol=333333/linkcol=e32c14/artwork=small/transparent=true/"
+            src="https://bandcamp.com/EmbeddedPlayer/track=2920915203/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
             seamless
           />
           <div>
