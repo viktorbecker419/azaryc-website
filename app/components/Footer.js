@@ -32,17 +32,6 @@ const socials = [
     ),
   },
   {
-    label: 'Discogs',
-    href: 'https://www.discogs.com/artist/824607-Rico-Casazza',
-    icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-        <circle cx="12" cy="12" r="10"/>
-        <circle cx="12" cy="12" r="3" fill="var(--color-dark)"/>
-        <circle cx="12" cy="12" r="1" fill="currentColor"/>
-      </svg>
-    ),
-  },
-  {
     label: 'Spotify',
     href: 'https://open.spotify.com/artist/0S3n3dNP88Wa9k9HI9EgLf',
     color: '#1DB954',
